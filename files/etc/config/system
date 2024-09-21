@@ -1,12 +1,12 @@
 
 config system
+	option hostname 'IPTV'
+	option timezone 'CST-8'
 	option ttylogin '0'
 	option log_size '64'
 	option urandom_seed '0'
 	option compat_version '1.1'
-	option timezone 'CST-8'
 	option zonename 'Asia/Shanghai'
-	option hostname 'IPTV'
 	option log_proto 'udp'
 	option conloglevel '8'
 	option cronloglevel '5'
@@ -18,17 +18,15 @@ config timeserver 'ntp'
 	list server 'cn.ntp.org.cn'
 
 config led 'led_internet'
-	option trigger 'netdev'
-	option name 'iptv'
-	option dev 'lan1'
-	list mode 'link'
-	list mode 'rx'
-	option sysfs 'blue:sys'
-
-config led
-	option name 'sdyx'
-	option trigger 'netdev'
-	option dev 'lan2'
-	list mode 'rx'
+	option name 'internet'
 	option sysfs 'blue:internet'
+	option trigger 'netdev'
+	option mode 'link tx rx'
+	option dev 'wan'
+
+config imm_init
+	option ipv6 '2'
+	option lang '1'
+	option system_chn '1'
+	option opkg_mirror 'https://mirrors.vsean.net/openwrt'
 

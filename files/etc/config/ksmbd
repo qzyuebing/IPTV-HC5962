@@ -3,7 +3,7 @@ config globals
 	option workgroup 'WORKGROUP'
 	option description 'Ksmbd on OpenWrt'
 	option allow_legacy_protocols '1'
-	option interface 'wan'
+	option interface 'lan wan'
 
 config share
 	option name 'ssd'
