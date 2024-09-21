@@ -18,11 +18,19 @@ config timeserver 'ntp'
 	list server 'cn.ntp.org.cn'
 
 config led 'led_internet'
-	option name 'internet'
-	option sysfs 'blue:internet'
 	option trigger 'netdev'
-	option mode 'link tx rx'
-	option dev 'wan'
+	option name 'iptv'
+	option dev 'lan1'
+	list mode 'link'
+	list mode 'rx'
+	option sysfs 'blue:sys'
+
+config led
+	option name 'sdyx'
+	option trigger 'netdev'
+	option dev 'lan2'
+	list mode 'rx'
+	option sysfs 'blue:internet'
 
 config imm_init
 	option ipv6 '2'
