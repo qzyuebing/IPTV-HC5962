@@ -11,12 +11,6 @@ config system
 	option conloglevel '8'
 	option cronloglevel '5'
 
-config timeserver 'ntp'
-	list server 'ntp.tencent.com'
-	list server 'ntp1.aliyun.com'
-	list server 'ntp.ntsc.ac.cn'
-	list server 'cn.ntp.org.cn'
-
 config led 'led_internet'
 	option trigger 'netdev'
 	option name 'iptv'
@@ -32,10 +26,8 @@ config led
 	list mode 'rx'
 	option sysfs 'blue:internet'
 
-cconfig imm_init
+config imm_init
 	option ipv6 '2'
 	option lang '1'
 	option system_chn '1'
 	option opkg_mirror 'https://mirrors.vsean.net/openwrt'
-
-
