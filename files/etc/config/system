@@ -11,6 +11,12 @@ config system
 	option conloglevel '8'
 	option cronloglevel '5'
 
+config timeserver 'ntp'
+	list server 'ntp.tencent.com'
+	list server 'ntp1.aliyun.com'
+	list server 'ntp.ntsc.ac.cn'
+	list server 'cn.ntp.org.cn'
+
 config led 'led_internet'
 	option trigger 'netdev'
 	option name 'iptv'
