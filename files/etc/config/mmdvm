@@ -76,7 +76,7 @@ config mmdvmhost 'System_Fusion_Network'
 config ysfgateway 'YSFG_Network'
 	option InactivityTimeout '10'
 	option Revert '1'
-	option Startup 'CN-BI4PCS-nw'
+	option Startup 'CN-BI4PCS'
 
 config p25gateway 'P25G_Network'
 	option Startup '10403'
